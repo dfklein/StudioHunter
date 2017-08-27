@@ -1,7 +1,7 @@
 @CHARSET "ISO-8859-1";
 
-/* Classes sobrescritas */
 
+/* Classes sobrescritas */
 .panel {
 	border:0px;
 }
@@ -54,6 +54,40 @@ button:hover {
 .barra-navegacao .navbar-nav li a {
  	line-height: 50px;
 }
+
+/* Classes do rodapé */
+/* .rodape { */
+/* 	position: fixed; */
+/* 	width: 100%; */
+/* } */
+
+.rodape .opcoes-rodape {
+	background-color: #232124;
+	color: white;
+	padding: 5px 80px;
+	
+}
+
+.rodape .opcoes-rodape .destaque {
+	color: #D0FF00;
+}
+
+.rodape .opcoes-rodape img {
+	width: 30px;
+	margin-right: 20px;
+}
+
+.rodape .opcoes-rodape .row {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.rodape .direitos-autorais .row {
+	background-color: #1D1B1E;
+	color: white;
+	padding: 20px 20px;
+}
+
 
 
 /* classes da home */
