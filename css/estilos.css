@@ -1,0 +1,80 @@
+@CHARSET "ISO-8859-1";
+
+/* Classes sobrescritas */
+
+.panel {
+	border:0px;
+}
+
+.panel-heading {
+	background-color: white !important;
+	border: 0px;
+}
+
+button {
+	background-color: #D0FF00 !important;
+	border-color: #D0FF00 !important;
+	
+}
+
+button:hover {
+	background-color: #e2fc71 !important;
+	border-color: #e2fc71 !important;
+	
+}
+
+/* Classes da barra de navegação */
+.barra-navegacao .navbar {
+	background-color: #D0FF00;
+	border-color: #D0FF00;
+	height: 80px;
+	vertical-align: middle;
+	padding-left:75px;
+	padding-right:75px;
+	color: black;
+	
+}
+
+.barra-navegacao a {
+ 	line-height: 50px;
+	
+}
+.barra-navegacao .navbar-brand {
+	background-color: #D0FF00;
+	height: 80px;
+	vertical-align: middle;
+	
+}
+.barra-navegacao .navbar-nav {
+	background-color: #D0FF00;
+	height: 80px;
+	vertical-align: middle;
+	
+}
+.barra-navegacao .navbar-nav li a {
+ 	line-height: 50px;
+}
+
+
+/* classes da home */
+.busca-home {
+	padding: 10px 20px;
+	background-color: #EFEDF0;
+	border: 0px;
+	border-radius: 4px;
+}
+
+.busca-home .row {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.busca-home select {
+	color: gray;
+}
+
+.estudios-destaque .row {
+	margin-top: 20px;
+	margin-bottom: 40px;
+	
+}
