@@ -68,10 +68,6 @@ button:hover {
 }
 
 /* Classes do rodapé */
-/* .rodape { */
-/* 	position: fixed; */
-/* 	width: 100%; */
-/* } */
 
 .rodape .opcoes-rodape {
 	background-color: #232124;
@@ -100,7 +96,10 @@ button:hover {
 	padding: 20px 20px;
 }
 
-/* classes da home */
+
+
+/* Classes da home */
+
 .busca-container {
 	position: relative;
 }
@@ -131,5 +130,37 @@ button:hover {
 .estudios-destaque .row {
 	margin-top: 20px;
 	margin-bottom: 40px;
+	
+}
+
+/* Classes da página de resultados de pesquisa */
+.tela-resultado-pesquisa .row {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.resultado-busca {
+	border: 1px solid;
+	border-color: #e2e2e2;
+	border-radius: 4px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.resultado-busca .row {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	
+}
+
+.resultado-busca .col-md-6 {
+	/* os 3 primeiros atributos são os que alinham os elementos ao fundo da célula */
+	float: none;
+    display: table-cell;
+    vertical-align: bottom;
+    padding-top: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+    color: gray;
 	
 }
