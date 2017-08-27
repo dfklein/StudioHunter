@@ -11,6 +11,14 @@
 	border: 0px;
 }
 
+.panel-body {
+	padding: 0px;
+}
+
+.navbar {
+	margin-bottom: 0px;
+}
+
 button {
 	background-color: #D0FF00 !important;
 	border-color: #D0FF00 !important;
@@ -44,6 +52,10 @@ button:hover {
 	height: 80px;
 	vertical-align: middle;
 	
+}
+
+.navbar-header img {
+	height: 79px;
 }
 .barra-navegacao .navbar-nav {
 	background-color: #D0FF00;
@@ -88,22 +100,31 @@ button:hover {
 	padding: 20px 20px;
 }
 
-
-
 /* classes da home */
-.busca-home {
+.busca-container {
+	position: relative;
+}
+
+.camada-sobre-imagem {
+	position: absolute;
+	top: 45%;
+	left: 0;
+	width: 100%;
+}
+
+.busca-formulario {
 	padding: 10px 20px;
 	background-color: #EFEDF0;
 	border: 0px;
 	border-radius: 4px;
 }
 
-.busca-home .row {
+.busca-formulario .row {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
 
-.busca-home select {
+.busca-formulario select {
 	color: gray;
 }
 
