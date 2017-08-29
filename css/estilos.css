@@ -183,6 +183,10 @@ rzslider span.rz-pointer {
 	padding-left: 6px;
 }
 
+.filtros-busca legend {
+	margin-top: 70px;
+}
+
 .filtros-busca .checkbox {
 	border: 1px solid;
 	border-color: #e2e2e2;

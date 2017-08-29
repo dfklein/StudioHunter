@@ -21,6 +21,11 @@ studioHunterApp.config(function($routeProvider, $locationProvider) {
 		controller:'ResultadoPesquisaController',
 		controllerAs: 'resultadoVm'
 	})
+	.when('/detalhes', {
+		templateUrl: PATH + 'detalheestudio.html',
+		controller:'DetalhesController',
+		controllerAs: 'detalheVm'
+	})
 	.otherwise({
 		redirectTo:'/',
 		controller:'HomeController',

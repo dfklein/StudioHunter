@@ -5,6 +5,9 @@ studioHunterApp.controller('MainController', function($scope, $route, $routePara
 		$location.path('/');
 	};
 	
+	$scope.onBuscarClick = function() {
+		$location.path('/resultadopesquisa');
+	};
 	
 });
 
@@ -13,17 +16,20 @@ studioHunterApp.controller('HomeController', function($scope, $route, $routePara
 	
 	var ctrl=this;
 	
-	ctrl.onBuscarClick = function() {
-		$location.path('/resultadopesquisa');
-	};
 	
 	
 });
 
-studioHunterApp.controller('ResultadoPesquisaController', function($scope, $route, $routeParams) { 
+studioHunterApp.controller('ResultadoPesquisaController', function($scope, $route, $routeParams, $location) { 
 	
 	var ctrl=this;
 	ctrl.minValue = 20;
 	ctrl.maxValue = 500;
+	
+});
+
+studioHunterApp.controller('DetalhesController', function($scope, $route, $routeParams, $location) { 
+	
+	var ctrl=this;
 	
 });
