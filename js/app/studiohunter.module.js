@@ -1,4 +1,4 @@
-var studioHunterApp = angular.module('StudioHunterApp', ['ngRoute']); 
+var studioHunterApp = angular.module('StudioHunterApp', ['ngRoute', 'rzModule', 'ui.bootstrap']); 
 
 studioHunterApp.config(function($routeProvider, $locationProvider) {
 //	var PATH = '../view/';
@@ -7,19 +7,16 @@ studioHunterApp.config(function($routeProvider, $locationProvider) {
 	
 	$routeProvider
 	.when('/', {
-		// os parâmetros abaixo são respectivamente a URL chamada e o controller utilizado. Desta forma você não utilizaria o "ng-controller" no html. Ver a página cliente.html
 		templateUrl: PATH + 'home.html',
 		controller:'HomeController',
 		controllerAs: 'homeVm'
 	})
 	.when('/home', {
-		// os parâmetros abaixo são respectivamente a URL chamada e o controller utilizado. Desta forma você não utilizaria o "ng-controller" no html. Ver a página cliente.html
 		templateUrl: PATH + 'home.html',
 		controller:'HomeController',
 		controllerAs: 'homeVm'
 	})
 	.when('/resultadopesquisa', {
-		// os parâmetros abaixo são respectivamente a URL chamada e o controller utilizado. Desta forma você não utilizaria o "ng-controller" no html. Ver a página cliente.html
 		templateUrl: PATH + 'resultadopesquisa.html',
 		controller:'ResultadoPesquisaController',
 		controllerAs: 'resultadoVm'

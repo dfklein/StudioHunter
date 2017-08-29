@@ -134,6 +134,15 @@ button:hover {
 }
 
 /* Classes da página de resultados de pesquisa */
+
+/* altera o estilo do slider */
+rzslider span.rz-pointer {
+	background-color: black;
+	width: 5px;
+	height: 20px;
+	margin-top: 6px;
+}
+
 .tela-resultado-pesquisa .row {
 	margin-top: 50px;
 	margin-bottom: 50px;
@@ -163,4 +172,27 @@ button:hover {
     padding-bottom: 15px;
     color: gray;
 	
+}
+
+.resultado-busca .icone {
+	margin-top: 25px;
+
+}
+
+.resultado-busca .col-md-2 {
+	padding-left: 6px;
+}
+
+.filtros-busca .checkbox {
+	border: 1px solid;
+	border-color: #e2e2e2;
+	border-radius: 4px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+
+.filtros-busca .checkbox label {
+	margin-top: 3px;
+	margin-bottom: 3px;
 }
