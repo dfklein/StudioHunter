@@ -1,102 +1,111 @@
-<div class="panel panel-default">
-	<div class="panel-body">
-		<div class="row">
-			<div class="col-md-7"></div>
-			<div class="col-md-5 pull-right">
-				<div class="input-group">
-					<input type="text" class="form-control"> 
-					<span class="input-group-btn">
-						<button class="btn btn-default" type="button" ng-click="onBuscarClick();">Buscar</button>
-					</span>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<img alt="foto 3 dos equipamentos" src="img/bannerdetalheestudio.jpg" class="img-responsive" style="width: 100%">
-		</div>
-		<div class="row">
-			<div class="col-md-10">
-				<div class="row">
-					<div class="col-md-8">
-						<label for="descricao" style="font-size: x-large;">DESCRIÇÃO</label>
-					</div>
-					<div class="col-md-4" style="text-align: right;">
-						<span style="font-weight: bold;">Indicado para: </span> Rock, Pop, Jazz
-					</div>
-				</div>
-				<div class="row">Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-					dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-					exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-					mollit anim id est laborum.</div>
-			</div>
-			<div class="col-md-2">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						ENTRE EM CONTATO
-					</div>
-					<div class="panel-body">
-						<div class="row">
-							<input type="text" placeholder="Nome" class="form-control"/>
-						</div>
-						<div class="row">
-							<input type="tel" placeholder="Telefone" class="form-control" />
-						</div>
-						<div class="row">
-							<input type="email" placeholder="E-mail" class="form-control" />
-						</div>
-						<div class="row">
-							<textarea rows="4" class="form-control"></textarea>
-						</div>
+<div class="tela-detalhe-estudio">
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-md-7"></div>
+				<div class="col-md-5 pull-right">
+					<div class="input-group">
+						<input type="text" class="form-control"> 
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="button" ng-click="onBuscarClick();">Buscar</button>
+						</span>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-10">
-				<label>EQUIPAMENTOS</label>
-				<div id="equipamentos">
-					<div class="col-md-4">
-						<img alt="foto 1 dos equipamentos" src="img/estudio01.jpg" class="img-responsive">
+			<div class="row">
+				<img alt="foto 3 dos equipamentos" src="img/bannerdetalheestudio.jpg" class="img-responsive" style="width: 100%">
+			</div>
+			<div class="row informacoes">
+				<div class="col-md-9">
+					<div class="row">
+						<div class="col-md-8">
+							<label for="descricao" style="font-size: x-large;">DESCRIÇÃO</label>
+						</div>
+						<div class="col-md-4" style="text-align: right;">
+							<span style="font-weight: bold;">Indicado para: </span> Rock, Pop, Jazz
+						</div>
 					</div>
-					<div class="col-md-4">
-						<img alt="foto 2 dos equipamentos" src="img/estudio01.jpg" class="img-responsive">
-					</div>
-					<div class="col-md-4">
-						<img alt="foto 3 dos equipamentos" src="img/estudio01.jpg" class="img-responsive">
-					</div>
+					<div class="row descricao">Lorem ipsum dolor sit amet, consectetur
+						adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+						dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+						exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate
+						velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+						occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+						mollit anim id est laborum.</div>
 				</div>
-				<label>SALAS</label>
-				<div id="salas">
-					<div class="col-md-4">
-						<img alt="foto 1 das salas" src="img/estudio03.jpg"	class="img-responsive">
-					</div>
-					<div class="col-md-4">
-						<img alt="foto 2 dos salas" src="img/estudio03.jpg"	class="img-responsive">
-					</div>
-					<div class="col-md-4">
-						<img alt="foto 3 dos salas" src="img/estudio03.jpg"	class="img-responsive">
+				<div class="col-md-3 opcoes-tela-detalhes">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							ENTRE EM CONTATO
+						</div>
+						<div class="panel-body" style="padding: 7px;">
+							<div class="row">
+								<input type="text" placeholder="Seu nome" class="form-control"/>
+							</div>
+							<div class="row">
+								<input type="tel" placeholder="Seu telefone" class="form-control" />
+							</div>
+							<div class="row">
+								<input type="email" placeholder="Seu e-mail" class="form-control" />
+							</div>
+							<div class="row">
+								<textarea rows="4" class="form-control" placeholder="Sua mensagem"></textarea>
+							</div>
+							<div class="row">
+								<button class="btn btn-default" type="button" ng-click="onBuscarClick();" style="width:100%">ENVIAR</button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-2">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						AGENDA
+			<div class="row">
+				<div class="col-md-9">
+					<div class="row" style="margin-top:0px;">
+						<label style="margin-bottom:15px;">EQUIPAMENTOS</label>
+						<div id="equipamentos">
+							<div class="col-md-4">
+								<img alt="foto 1 dos equipamentos" src="img/estudio01.jpg" class="img-responsive">
+							</div>
+							<div class="col-md-4">
+								<img alt="foto 2 dos equipamentos" src="img/estudio01.jpg" class="img-responsive">
+							</div>
+							<div class="col-md-4">
+								<img alt="foto 3 dos equipamentos" src="img/estudio01.jpg" class="img-responsive">
+							</div>
+						</div>
 					</div>
-					<div class="panel-body">
-						<img alt="foto 3 dos salas" src="img/calendarioico.png" class="img-responsive">
+					<div class="row">
+						<label style="margin-bottom:15px;">SALAS</label>
+						<div id="salas">
+							<div class="col-md-4">
+								<img alt="foto 1 das salas" src="img/estudio03.jpg"	class="img-responsive">
+							</div>
+							<div class="col-md-4">
+								<img alt="foto 2 dos salas" src="img/estudio03.jpg"	class="img-responsive">
+							</div>
+							<div class="col-md-4">
+								<img alt="foto 3 dos salas" src="img/estudio03.jpg"	class="img-responsive">
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						ONDE NOS ENCONTRAR
+				<div class="col-md-3 opcoes-tela-detalhes" ng-click="detalheVm.onAgendamentoClick()">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							AGENDA
+						</div>
+						<div class="panel-body" style="text-align: center;">
+							<img alt="foto 3 dos salas" src="img/calendarioico.png" class="img-responsive" style="margin: 0 auto;">
+						</div>
 					</div>
-					<div class="panel-body">
-						<img alt="foto 3 dos salas" src="img/mapa.png" class="img-responsive">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							ONDE NOS ENCONTRAR
+						</div>
+						<div class="panel-body">
+							<img alt="foto 3 dos salas" src="img/mapa.png" class="img-responsive" style="width: 100%">
+						</div>
 					</div>
 				</div>
 			</div>

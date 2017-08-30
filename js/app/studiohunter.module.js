@@ -16,6 +16,11 @@ studioHunterApp.config(function($routeProvider, $locationProvider) {
 		controller:'HomeController',
 		controllerAs: 'homeVm'
 	})
+	.when('/perfil', {
+		templateUrl: PATH + 'perfillogado.html',
+		controller:'PerfilController',
+		controllerAs: 'perfilVm'
+	})
 	.when('/resultadopesquisa', {
 		templateUrl: PATH + 'resultadopesquisa.html',
 		controller:'ResultadoPesquisaController',
@@ -25,6 +30,11 @@ studioHunterApp.config(function($routeProvider, $locationProvider) {
 		templateUrl: PATH + 'detalheestudio.html',
 		controller:'DetalhesController',
 		controllerAs: 'detalheVm'
+	})
+	.when('/agendamento', {
+		templateUrl: PATH + 'agendamento.html',
+		controller:'AgendamentoController',
+		controllerAs: 'agendamentoVm'
 	})
 	.otherwise({
 		redirectTo:'/',

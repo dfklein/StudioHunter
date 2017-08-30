@@ -200,3 +200,71 @@ rzslider span.rz-pointer {
 	margin-top: 3px;
 	margin-bottom: 3px;
 }
+
+/* Classes da tela de detalhes do estúdio */
+
+.tela-detalhe-estudio .row {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.tela-detalhe-estudio .informacoes .row {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 15px;
+	
+}
+
+.tela-detalhe-estudio .opcoes-tela-detalhes .row {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	
+}
+
+.tela-detalhe-estudio .opcoes-tela-detalhes .panel-heading {
+	text-align: center;
+	font-weight: bold;
+	color: #D0FF00;
+	background-color: #555356 !important;
+	padding: 0px;
+	height: 30px;
+	vertical-align: middle;
+	padding-top: 5px;
+	
+}
+
+.tela-detalhe-estudio .opcoes-tela-detalhes .panel-body {
+	background-color: #E6E4E5;
+}
+.tela-detalhe-estudio .opcoes-tela-detalhes .panel-body .row {
+	margin-top: 0px;	
+	margin-bottom: 0px;
+	padding-top: 5px;	
+	padding-bottom: 5px;	
+}
+
+/* perfil logado */
+.perfil-logado .titulo-secao {
+	background-color: #D0FF00;
+	color: black;
+	padding-left: 30px;
+	height: 30px;
+	padding-top: 5px;
+	
+}
+
+.perfil-logado .informacoes .row {
+	margin-top: 50px;
+}
+.perfil-logado .container-info {
+	border: 1px solid;
+	border-color: #e2e2e2;
+	border-radius: 4px;
+	padding: 10px;
+}
+.perfil-logado .container-info .icone {
+	color: gray;
+	font-weight: bolder;
+	font-size: x-large;
+}
+
