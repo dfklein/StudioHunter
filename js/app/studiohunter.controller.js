@@ -28,17 +28,17 @@ studioHunterApp.controller('MainController', function($uibModal, $scope, $route,
 
 	ctrl.openLoginModal = function (size, parentSelector) {
 	    var modalInstance = $uibModal.open({
-	      animation: ctrl.animationsEnabled,
+	      animation: true,
 	      ariaLabelledBy: 'modal-title',
 	      ariaDescribedBy: 'modal-body',
 	      templateUrl: 'view/loginmodal.html',
-	      controller: 'ModalInstanceCtrl',
+	      controller: 'LoginModalCtrl',
 	      controllerAs: 'modalCtrl',
-	      size: size,
+	      size: 'md',
 	      scope: $scope,
 	      resolve: {
-	        items: function () {
-	          return ctrl.items;
+	    	  parentController: function(){
+	                return ctrl;
 	        }
 	      }
 	    });
@@ -47,7 +47,7 @@ studioHunterApp.controller('MainController', function($uibModal, $scope, $route,
 });
 
 
-studioHunterApp.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, $route, $routeParams, $location, StudioHunterService) {
+studioHunterApp.controller('LoginModalCtrl', function ($scope, $uibModalInstance, $route, $routeParams, $location, StudioHunterService, parentController) {
 	  var $ctrl = this;
 
 	  $ctrl.login = function () {
@@ -60,6 +60,10 @@ studioHunterApp.controller('ModalInstanceCtrl', function ($scope, $uibModalInsta
 			  $location.path('/perfil');
 			  $uibModalInstance.dismiss();
 		  }
+	  };
+	  
+	  $ctrl.close = function() {
+		  $uibModalInstance.close();
 	  };
 });
 
@@ -105,9 +109,10 @@ studioHunterApp.controller('DetalhesController', function($uibModal, $scope, $ro
 				      controller: 'LoginRequeridoCtrl',
 				      controllerAs: 'loginRequeridoCtrl',
 				      scope: $scope,
+				      size: 'md',
 				      resolve: {
-				        items: function () {
-				          return ctrl.items;
+				    	  parentController: function(){
+				                return ctrl;
 				        }
 				      }
 				    });
@@ -125,24 +130,23 @@ studioHunterApp.controller('AgendamentoController', function($uibModal, $scope, 
 	
 	var ctrl=this;
 	
-	ctrl.animationsEnabled = true;
 	ctrl.onAgendamentoClick = function() {
-		var modalInstance = $uibModal.open({
-		      animation: ctrl.animationsEnabled,
-		      ariaLabelledBy: 'modal-title',
-		      ariaDescribedBy: 'modal-body',
-		      templateUrl: 'view/mensagemSucesso.html',
-		      controller: 'MensagemSucessoCtrl',
-		      controllerAs: 'sucessoCtrl',
-		      scope: $scope,
-		      resolve: {
-		        items: function () {
-		          return ctrl.items;
-		        }
-		      }
-		    });
-		  }
-		
+		  var modalInstance = $uibModal.open({
+			  animation: true,
+			  ariaLabelledBy: 'modal-title',
+			  ariaDescribedBy: 'modal-body',
+			  templateUrl: 'view/agendamentoModal.html',
+			  controller: 'AgendamentoModalCtrl',
+			  controllerAs: 'agendamentoCtrl',
+			  scope: $scope,
+			  size: 'md',
+			  resolve: {
+				  parentController: function(){
+					  return ctrl;
+			      }
+			  }
+		  });
+	  }
 	
 });
 
@@ -152,12 +156,58 @@ studioHunterApp.controller('MensagemSucessoCtrl', function ($scope, $uibModalIns
 	  $ctrl.onOkClick = function() {
 		  $uibModalInstance.dismiss();
 	  }
+	  
 });
 
-studioHunterApp.controller('LoginRequeridoCtrl', function ($scope, $uibModalInstance, $route, $routeParams, $location, StudioHunterService) {
+studioHunterApp.controller('AgendamentoModalCtrl', function ($uibModal, $scope, $uibModalInstance, $route, $routeParams, $location, StudioHunterService) {
+	var ctrl = this;
+	
+	ctrl.onEfetivarAgendamentoClick = function() {
+		  var modalInstance = $uibModal.open({
+			  animation: true,
+			  ariaLabelledBy: 'modal-title',
+			  ariaDescribedBy: 'modal-body',
+			  templateUrl: 'view/mensagemSucesso.html',
+			  controller: 'MensagemSucessoCtrl',
+			  controllerAs: 'sucessoCtrl',
+			  scope: $scope,
+			  size: 'md',
+			  resolve: {
+				  parentController: function(){
+					  return ctrl;
+			      }
+			  }
+		  });
+	  }
+	
+	
+	ctrl.onCancelarClick = function() {
+		$uibModalInstance.close();
+	}
+});
+
+studioHunterApp.controller('LoginRequeridoCtrl', function ($uibModal, $scope, $uibModalInstance, $route, $routeParams, $location, StudioHunterService) {
 	var $ctrl = this;
 	
 	$ctrl.onOkClick = function() {
-		$uibModalInstance.dismiss();
+		$uibModalInstance.close();
+	}
+	
+	$ctrl.onLoginClick= function() {
+		var modalInstance = $uibModal.open({
+		      animation: true,
+		      ariaLabelledBy: 'modal-title',
+		      ariaDescribedBy: 'modal-body',
+		      templateUrl: 'view/loginmodal.html',
+		      controller: 'LoginModalCtrl',
+		      controllerAs: 'modalCtrl',
+		      size: 'md',
+		      scope: $scope,
+		      resolve: {
+		    	  parentController: function(){
+		                return $ctrl;
+		        }
+		      }
+		    });
 	}
 });
