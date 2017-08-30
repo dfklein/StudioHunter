@@ -88,11 +88,35 @@ studioHunterApp.controller('ResultadoPesquisaController', function($scope, $rout
 	
 });
 
-studioHunterApp.controller('DetalhesController', function($scope, $route, $routeParams, $location) { 
+studioHunterApp.controller('DetalhesController', function($uibModal, $scope, $route, $routeParams, $location, StudioHunterService) { 
 	
 	var ctrl=this;
+	var usuarioLogado = StudioHunterService.getUsuarioLogado();
 	ctrl.onAgendamentoClick = function() {
-		$location.path('/agendamento');
+		if(usuarioLogado == undefined || usuarioLogado == null || usuarioLogado == '') {
+			
+			ctrl.animationsEnabled = true;
+			ctrl.onAgendamentoClick = function() {
+				var modalInstance = $uibModal.open({
+				      animation: ctrl.animationsEnabled,
+				      ariaLabelledBy: 'modal-title',
+				      ariaDescribedBy: 'modal-body',
+				      templateUrl: 'view/mensagemLoginRequerido.html',
+				      controller: 'LoginRequeridoCtrl',
+				      controllerAs: 'loginRequeridoCtrl',
+				      scope: $scope,
+				      resolve: {
+				        items: function () {
+				          return ctrl.items;
+				        }
+				      }
+				    });
+				  }
+			
+		} else {
+			$location.path('/agendamento');
+			
+		}
 	};
 	
 });
@@ -128,4 +152,12 @@ studioHunterApp.controller('MensagemSucessoCtrl', function ($scope, $uibModalIns
 	  $ctrl.onOkClick = function() {
 		  $uibModalInstance.dismiss();
 	  }
+});
+
+studioHunterApp.controller('LoginRequeridoCtrl', function ($scope, $uibModalInstance, $route, $routeParams, $location, StudioHunterService) {
+	var $ctrl = this;
+	
+	$ctrl.onOkClick = function() {
+		$uibModalInstance.dismiss();
+	}
 });
