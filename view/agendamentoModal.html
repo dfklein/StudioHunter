@@ -1,8 +1,30 @@
 <div class="modal-content">
-	<div class="modal-body">
-		oi agendamentoCtrl
-		
-		onEfetivarAgendamentoClick
-		onCancelarClick
+	<div class="modal-header">
+		<div class="col-md-11">
+			<label>Estúdio XXX</label><br />
+			<div style="text-align: center;">
+				6 set de 2017 - 13:00 às 15:00h
+			</div>
+		</div>
+		<div class="col-md-1">
+			<div ng-click="agendamentoCtrl.onCancelarClick();" style="cursor: pointer;"><label >X</label></div>
+		</div>
+	</div>
+	<div class="modal-body" >
+		<div class="row" style="padding: 20px">
+			<select class="form-control" ng-model="agendamentoCtrl.sala" style="color: gray;">
+				<option value="">Sala</option>
+				<option value="1">Cannibal Corpse</option>
+				<option value="2">Slayer</option>
+				<option value="3">Hamurabi</option>
+				
+			</select>
+		</div>
+		<div class="row" style="padding: 20px">
+			<textarea rows="5" cols="5" class="form-control" placeholder="Observação"></textarea>
+		</div>
+		<div class="row" style="padding: 20px">
+			<button type="button" class="btn btn-default" style="width: 100%" ng-click="agendamentoCtrl.onEfetivarAgendamentoClick();">AGENDAR</button>
+		</div>
 	</div>
 </div>
