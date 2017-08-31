@@ -90,9 +90,9 @@ studioHunterApp.controller('ResultadoPesquisaController', function($uibModal, St
 	ctrl.minValue = 20;
 	ctrl.maxValue = 500;
 	
-	ctrl.usuarioLogado = StudioHunterService.getUsuarioLogado();
 	
 	ctrl.onEstudioClick = function() {
+		ctrl.usuarioLogado = StudioHunterService.getUsuarioLogado();
 		if(ctrl.usuarioLogado != undefined) {
 			$location.path('/detalhes');
 		} else {
@@ -120,8 +120,8 @@ studioHunterApp.controller('ResultadoPesquisaController', function($uibModal, St
 studioHunterApp.controller('DetalhesController', function($uibModal, $scope, $route, $routeParams, $location, StudioHunterService) { 
 	
 	var ctrl=this;
-	var usuarioLogado = StudioHunterService.getUsuarioLogado();
 	ctrl.onAgendamentoClick = function() {
+		var usuarioLogado = StudioHunterService.getUsuarioLogado();
 		if(usuarioLogado == undefined || usuarioLogado == null || usuarioLogado == '') {
 			
 			ctrl.animationsEnabled = true;
