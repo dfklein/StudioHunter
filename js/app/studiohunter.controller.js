@@ -39,7 +39,7 @@ studioHunterApp.controller('MainController', function($uibModal, $scope, $route,
 	      size: 'md',
 	      scope: $scope,
 	      resolve: {
-	    	  parentController: function() {
+	    	  parentController: function() { // poderia ter deixado um undefined ao invés da gambiarra de implementar método vazio.
 	                return ctrl;
 	        }
 	      }
@@ -179,10 +179,21 @@ studioHunterApp.controller('AgendamentoController', function($uibModal, $scope, 
 
 studioHunterApp.controller('AgendamentoModalCtrl', function ($uibModal, $scope, $uibModalInstance, $route, $routeParams, $location, StudioHunterService) {
 	var ctrl = this;
-	
+//	ctrl.mensagemErro = '';
 	ctrl.onEfetivarAgendamentoClick = function() {
-		
-		  var modalInstance = $uibModal.open({
+		switch(ctrl.sala) {
+	    case undefined:
+	    	ctrl.mensagemErro = 'Selecione uma sala';
+	        break;
+	    case '1':
+	    	ctrl.mensagemErro = 'Não há disponibilidade de horários para esta sala, selecione outra';
+	        break;
+	    case '2':
+	    	ctrl.mensagemErro = 'Não há disponibilidade de horários para esta sala, selecione outra';
+	    	break;
+	    case '3':
+	    	ctrl.mensagemErro = '';
+	    	var modalInstance = $uibModal.open({
 			  animation: true,
 			  ariaLabelledBy: 'modal-title',
 			  ariaDescribedBy: 'modal-body',
@@ -195,8 +206,11 @@ studioHunterApp.controller('AgendamentoModalCtrl', function ($uibModal, $scope, 
 					  return ctrl;
 			      }
 			  }
-		  });
-	  }
+			});
+	    	break;
+		}
+		
+	}
 	
 	
 	ctrl.onCancelarClick = function() {

@@ -11,11 +11,14 @@
 		</div>
 	</div>
 	<div class="modal-body" >
+		<div class="row" style="text-align: center;" ng-show="agendamentoCtrl.mensagemErro != undefined && agendamentoCtrl.mensagemErro != ''">
+			<span style="color: red;">{{agendamentoCtrl.mensagemErro}}</span>
+		</div>
 		<div class="row" style="padding: 20px">
 			<select class="form-control" ng-model="agendamentoCtrl.sala" style="color: gray;">
 				<option value="">Sala</option>
-				<option value="1">Cannibal Corpse</option>
-				<option value="2">Slayer</option>
+				<option value="1">Bon Jovi</option>
+				<option value="2">Justin Bieber</option>
 				<option value="3">Hamurabi</option>
 				
 			</select>
