@@ -24,8 +24,10 @@ studioHunterApp.controller('MainController', function($uibModal, $scope, $route,
 		$location.path('/resultadopesquisa');
 	};
 	
-	ctrl.animationsEnabled = true;
-
+	ctrl.onOkClick = function() {
+		
+	};
+	
 	ctrl.openLoginModal = function (size, parentSelector) {
 	    var modalInstance = $uibModal.open({
 	      animation: true,
@@ -37,7 +39,7 @@ studioHunterApp.controller('MainController', function($uibModal, $scope, $route,
 	      size: 'md',
 	      scope: $scope,
 	      resolve: {
-	    	  parentController: function(){
+	    	  parentController: function() {
 	                return ctrl;
 	        }
 	      }
