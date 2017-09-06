@@ -15,7 +15,7 @@
 			<span style="color: red;">{{agendamentoCtrl.mensagemErro}}</span>
 		</div>
 		<div class="row" style="padding: 20px">
-			<select class="form-control" ng-model="agendamentoCtrl.sala" style="color: gray;">
+			<select class="form-control" ng-model="agendamentoCtrl.sala" style="color: gray;" ng-click="agendamentoCtrl.mensagemErro = ''">
 				<option value="">Sala</option>
 				<option value="1">Bon Jovi</option>
 				<option value="2">Justin Bieber</option>
